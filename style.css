@@ -75,3 +75,23 @@ section {
 .button:hover {
     background: #008c3a;
 }
+header {
+    background: linear-gradient(135deg, #0057b8, #00b050);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
