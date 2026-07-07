@@ -45,3 +45,33 @@ footer {
     text-align: center;
     padding: 20px;
 }
+section h2 {
+    color: #0057b8;
+    text-align: center;
+}
+
+section h3 {
+    color: #333;
+}
+
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 1000px;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    background: #00b050;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #008c3a;
+}
