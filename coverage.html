@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script src="coverage.js" defer></script>
+
 </head>
 
 <body>
@@ -22,6 +24,7 @@
 
 </header>
 
+
 <nav>
 
 <a href="index.html">Home</a>
@@ -32,38 +35,52 @@
 
 </nav>
 
+
 <section>
 
 <h2>Coverage Checker</h2>
 
 <p>
-Enter your address below and we'll help you find the best fibre options available.
+Enter your address below and OneSwitch SA will help you find the best fibre options available.
 </p>
 
-<form>
+
+<form id="coverageForm">
 
 <label for="street">Street Address</label>
-<input type="text" id="street" name="street" required>
+<input type="text" id="street" name="street" placeholder="Enter street address" required>
+
 
 <label for="suburb">Suburb</label>
-<input type="text" id="suburb" name="suburb" required>
+<input type="text" id="suburb" name="suburb" placeholder="Enter suburb" required>
+
 
 <label for="city">City</label>
-<input type="text" id="city" name="city" required>
+<input type="text" id="city" name="city" placeholder="Enter city" required>
+
 
 <button class="button" type="submit">
 Check Coverage
 </button>
 
+
+<p id="coverageResult"></p>
+
+
 </form>
+
 
 </section>
 
+
 <footer>
 
-<p>© 2026 OneSwitch SA. All Rights Reserved.</p>
+<p>
+© 2026 OneSwitch SA. All Rights Reserved.
+</p>
 
 </footer>
+
 
 </body>
 
