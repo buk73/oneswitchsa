@@ -156,3 +156,26 @@ button.button {
 button.button:hover {
     background: #008844;
 }
+/* Fibre Comparison Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #003366;
+    color: white;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
