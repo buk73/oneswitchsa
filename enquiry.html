@@ -38,9 +38,49 @@
 <h2>Request a Fibre Quote</h2>
 
 <p>
-Complete the enquiry form below and a OneSwitch SA
-consultant will contact you.
+Complete the form below and our team will contact you.
 </p>
+
+<form>
+
+<label for="name">Full Name</label><br>
+<input type="text" id="name" name="name" required><br><br>
+
+<label for="phone">Mobile Number</label><br>
+<input type="tel" id="phone" name="phone" required><br><br>
+
+<label for="email">Email Address</label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="address">Installation Address / Suburb</label><br>
+<input type="text" id="address" name="address"><br><br>
+
+<label for="speed">Preferred Fibre Speed</label><br>
+
+<select id="speed" name="speed">
+
+<option>20 Mbps</option>
+<option>50 Mbps</option>
+<option>100 Mbps</option>
+<option>200 Mbps</option>
+<option>500 Mbps</option>
+<option>1 Gbps</option>
+
+</select>
+
+<br><br>
+
+<label for="message">Additional Information</label><br>
+
+<textarea id="message" name="message" rows="5"></textarea>
+
+<br><br>
+
+<button class="button" type="submit">
+Submit Enquiry
+</button>
+
+</form>
 
 </section>
 
