@@ -6,23 +6,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Check Fibre Coverage | OneSwitch SA</title>
+<title>Fibre Coverage Checker | OneSwitch SA</title>
 
 <link rel="stylesheet" href="style.css">
 
-<script src="coverage.js" defer></script>
-
 </head>
+
 
 <body>
 
+
 <header>
 
-<h1>Check Fibre Coverage</h1>
+<img src="logo.jpg" alt="OneSwitch SA Logo" width="180">
 
-<p>Find out if fibre is available in your area.</p>
+<h1>Check Fibre Availability</h1>
+
+<h2>Find Fibre Options Available In Your Area</h2>
+
+<p>
+Enter your location details and OneSwitch SA will help you find the best fibre solution.
+</p>
 
 </header>
+
 
 
 <nav>
@@ -30,41 +37,133 @@
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="coverage.html">Coverage</a>
+<a href="compare.html">Compare</a>
 <a href="about.html">About Us</a>
+<a href="isp-partners.html">Partners</a>
 <a href="contact.html">Contact</a>
 
 </nav>
 
 
+
+
 <section>
 
-<h2>Coverage Checker</h2>
+<h2>Fibre Coverage Checker</h2>
 
 <p>
-Enter your address below and OneSwitch SA will help you find the best fibre options available.
+Complete your details below. Our team will check available fibre options and help you connect with a suitable provider.
 </p>
 
 
-<form id="coverageForm">
-
-<label for="street">Street Address</label>
-<input type="text" id="street" name="street" placeholder="Enter street address" required>
+<form action="https://formspree.io/f/mjgngrye" method="POST">
 
 
-<label for="suburb">Suburb</label>
-<input type="text" id="suburb" name="suburb" placeholder="Enter suburb" required>
+<label for="name">Full Name:</label><br>
+
+<input type="text" id="name" name="name" required>
+
+<br><br>
 
 
-<label for="city">City</label>
-<input type="text" id="city" name="city" placeholder="Enter city" required>
+
+<label for="phone">Mobile Number:</label><br>
+
+<input type="tel" id="phone" name="phone" required>
+
+<br><br>
 
 
-<button class="button" type="submit">
-Check Coverage
+
+<label for="email">Email Address:</label><br>
+
+<input type="email" id="email" name="email" required>
+
+<br><br>
+
+
+
+<label for="address">Street Address:</label><br>
+
+<input type="text" id="address" name="address" required>
+
+<br><br>
+
+
+
+<label for="suburb">Suburb:</label><br>
+
+<input type="text" id="suburb" name="suburb" required>
+
+<br><br>
+
+
+
+<label for="city">City / Town:</label><br>
+
+<input type="text" id="city" name="city" required>
+
+<br><br>
+
+
+
+<label for="province">Province:</label><br>
+
+<select id="province" name="province" required>
+
+<option value="">Select Province</option>
+
+<option>Gauteng</option>
+<option>Western Cape</option>
+<option>KwaZulu-Natal</option>
+<option>Eastern Cape</option>
+<option>Free State</option>
+<option>Limpopo</option>
+<option>Mpumalanga</option>
+<option>North West</option>
+<option>Northern Cape</option>
+
+</select>
+
+
+<br><br>
+
+
+
+<label for="property">Property Type:</label><br>
+
+<select id="property" name="property">
+
+<option>Home</option>
+
+<option>Apartment</option>
+
+<option>Business</option>
+
+</select>
+
+
+<br><br>
+
+
+
+<label for="message">Additional Information:</label><br>
+
+<textarea id="message" name="message" rows="5"></textarea>
+
+
+<br><br>
+
+
+
+<input type="hidden" name="_subject" value="New OneSwitch SA Fibre Coverage Request">
+
+
+
+<button type="submit">
+Check My Fibre Availability
 </button>
 
-
-<p id="coverageResult"></p>
 
 
 </form>
@@ -73,13 +172,89 @@ Check Coverage
 </section>
 
 
+
+
+
+<section>
+
+
+<h2>What Happens Next?</h2>
+
+
+<div class="card">
+
+<h3>1. Coverage Check</h3>
+
+<p>
+We review your location against available fibre networks.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>2. Provider Matching</h3>
+
+<p>
+We identify suitable fibre providers and packages.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>3. Connection Support</h3>
+
+<p>
+We guide you through the installation and activation process.
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
 <footer>
+
+
+<h3>OneSwitch SA</h3>
+
+<p>
+Helping South Africans compare fibre deals and connect with trusted providers.
+</p>
+
+
+<p>
+📧 oneswitchsa@gmail.com
+</p>
+
+
+<p>
+
+<a href="privacy.html">Privacy Policy</a> |
+
+<a href="terms.html">Terms & Conditions</a> |
+
+<a href="contact.html">Contact Us</a>
+
+</p>
+
 
 <p>
 © 2026 OneSwitch SA. All Rights Reserved.
 </p>
 
+
 </footer>
+
 
 
 </body>
