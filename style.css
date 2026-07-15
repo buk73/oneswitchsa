@@ -358,3 +358,70 @@ footer a:hover {
 
 
 }
+/* ==========================================
+   Why South Africans Choose OneSwitch SA
+========================================== */
+
+.stats {
+    background: #f4f8fc;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #003366;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat-box {
+    background: #ffffff;
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.stat-box h4 {
+    color: #003366;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.stat-box p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    }
