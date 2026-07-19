@@ -453,3 +453,30 @@ table tr:nth-child(even) {
 table tr:hover {
     background: #eef5ff;
     }
+/* Partner Network Section */
+
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+section table th {
+    background: #003366;
+    color: white;
+    padding: 15px;
+}
+
+section table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+section table tr:nth-child(even) {
+    background: #f5f8fc;
+}
+
+section table tr:hover {
+    background: #e8f1ff;
+    }
