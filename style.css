@@ -480,3 +480,59 @@ section table tr:nth-child(even) {
 section table tr:hover {
     background: #e8f1ff;
     }
+/* Partner Network Section */
+
+.partners-section {
+    text-align: center;
+    padding: 40px;
+}
+
+
+.partners-section table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+
+.partners-section th,
+.partners-section td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+
+.partners-section th {
+    background: #003366;
+    color: white;
+}
+
+
+/* Improve card layout */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Countdown Banner */
+
+.countdown-banner {
+    background: #0066cc;
+    color: white;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+}
