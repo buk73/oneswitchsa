@@ -278,9 +278,36 @@ tr:hover {
 }
 
 
+.whatsapp-button {
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+background-color: #25D366;
+
+color: white;
+
+padding: 15px 20px;
+
+border-radius: 50px;
+
+text-decoration: none;
+
+font-weight: bold;
+
+z-index: 9999;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+
 .whatsapp-button:hover {
 
-    background: #128C7E;
+opacity: 0.85;
 
 }
 
