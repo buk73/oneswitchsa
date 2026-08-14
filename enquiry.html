@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fibre Enquiry | OneSwitch SA</title>
+<title>Get Your Fibre Recommendation | OneSwitch SA</title>
 
-<meta name="description" content="Submit your fibre requirements and let OneSwitch SA help you find a suitable connectivity solution.">
+<meta name="description" content="Request a personalised fibre recommendation from OneSwitch SA. Tell us your location, needs and budget and we'll help you find suitable fibre options.">
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,30 +18,52 @@
 <body>
 
 
+<!-- =========================
+     HEADER & NAVIGATION
+========================= -->
+
 <header>
 
 <div class="container">
 
-<img src="logo.jpg" alt="OneSwitch SA Logo" class="logo">
+<img
+src="logo.jpg"
+alt="OneSwitch SA Logo"
+class="logo"
+>
 
 
 <nav>
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
 
-<li><a href="services.html">Services</a></li>
+<li>
+<a href="services.html">Services</a>
+</li>
 
-<li><a href="coverage.html">Coverage</a></li>
+<li>
+<a href="coverage.html">Coverage</a>
+</li>
 
-<li><a href="compare.html">Compare</a></li>
+<li>
+<a href="compare.html">Compare</a>
+</li>
 
-<li><a href="about.html">About</a></li>
+<li>
+<a href="about.html">About</a>
+</li>
 
-<li><a href="isp-partners.html">Partners</a></li>
+<li>
+<a href="isp-partners.html">Partners</a>
+</li>
 
-<li><a href="contact.html">Contact</a></li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
 
 </ul>
 
@@ -53,9 +75,16 @@
 
 
 
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 <main>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -65,11 +94,9 @@
 Get Your Fibre Recommendation
 </h1>
 
-
 <p>
-Tell us what you need and OneSwitch SA will help simplify your fibre decision.
+Tell OneSwitch SA what you need and we'll help you explore suitable fibre solutions for your home or business.
 </p>
-
 
 </div>
 
@@ -77,248 +104,546 @@ Tell us what you need and OneSwitch SA will help simplify your fibre decision.
 
 
 
-
+<!-- =========================
+     ENQUIRY FORM
+========================= -->
 
 <section>
 
 <div class="container">
-
 
 <div class="section-title">
 
 <h2>
-Your Fibre Requirements
+Tell Us What You Need
 </h2>
 
 <p>
-Complete the form below and we will assist you with your connectivity journey.
+Complete the form below and our team will review your requirements and get back to you.
 </p>
 
 </div>
 
 
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form
+action="https://formspree.io/f/mjgngrke"
+method="POST"
+>
 
 
-<input 
+<!-- Form subject -->
+
+<input
+type="hidden"
+name="_subject"
+value="New OneSwitch SA Fibre Enquiry"
+>
+
+
+<!-- Customer name -->
+
+<label for="full-name">
+Full Name *
+</label>
+
+<input
 type="text"
+id="full-name"
 name="name"
-placeholder="Full Name"
-required>
+placeholder="Enter your full name"
+required
+>
 
 
-<input 
+
+<!-- Email -->
+
+<label for="email">
+Email Address *
+</label>
+
+<input
 type="email"
+id="email"
 name="email"
-placeholder="Email Address"
-required>
+placeholder="you@example.com"
+required
+>
 
 
-<input 
+
+<!-- Phone -->
+
+<label for="phone">
+Mobile / WhatsApp Number *
+</label>
+
+<input
 type="tel"
+id="phone"
 name="phone"
-placeholder="Phone Number"
-required>
+placeholder="e.g. 072 123 4567"
+required
+>
 
 
+
+<!-- Customer type -->
+
+<label for="customer-type">
+What type of customer are you? *
+</label>
+
+<select
+id="customer-type"
+name="customer_type"
+required
+>
+
+<option value="">
+Please select
+</option>
+
+<option value="Residential">
+Home / Residential
+</option>
+
+<option value="Business">
+Business
+</option>
+
+</select>
+
+
+
+<!-- Address -->
+
+<label for="address">
+Street Address
+</label>
 
 <input
 type="text"
-name="address"
-placeholder="Street Address"
-required>
+id="address"
+name="street_address"
+placeholder="Street address"
+>
 
 
+
+<!-- Suburb -->
+
+<label for="suburb">
+Suburb
+</label>
 
 <input
 type="text"
+id="suburb"
 name="suburb"
 placeholder="Suburb"
-required>
+>
 
 
+
+<!-- City -->
+
+<label for="city">
+City
+</label>
 
 <input
 type="text"
+id="city"
 name="city"
 placeholder="City"
-required>
+>
 
 
 
-<select name="customer_type">
+<!-- Province -->
 
+<label for="province">
+Province
+</label>
 
-<option>
-Home User
+<select
+id="province"
+name="province"
+>
+
+<option value="">
+Select province
 </option>
 
-
-<option>
-Small Business
+<option value="Gauteng">
+Gauteng
 </option>
 
-
-<option>
-Enterprise
+<option value="Western Cape">
+Western Cape
 </option>
 
+<option value="KwaZulu-Natal">
+KwaZulu-Natal
+</option>
+
+<option value="Eastern Cape">
+Eastern Cape
+</option>
+
+<option value="Free State">
+Free State
+</option>
+
+<option value="Limpopo">
+Limpopo
+</option>
+
+<option value="Mpumalanga">
+Mpumalanga
+</option>
+
+<option value="North West">
+North West
+</option>
+
+<option value="Northern Cape">
+Northern Cape
+</option>
 
 </select>
 
 
 
+<!-- Current ISP -->
 
-<select name="usage">
+<label for="current-isp">
+Current Internet Provider
+</label>
+
+<input
+type="text"
+id="current-isp"
+name="current_isp"
+placeholder="e.g. Telkom, Vodacom, MTN, etc."
+>
 
 
-<option>
-General Internet Usage
+
+<!-- Fibre speed -->
+
+<label for="speed">
+Preferred Fibre Speed
+</label>
+
+<select
+id="speed"
+name="preferred_speed"
+>
+
+<option value="">
+Not sure / Please advise
 </option>
 
-
-<option>
-Streaming & Entertainment
+<option value="Up to 25 Mbps">
+Up to 25 Mbps
 </option>
 
-
-<option>
-Gaming
-</option>
-
-
-<option>
-Remote Work
-</option>
-
-
-<option>
-Business Operations
-</option>
-
-
-</select>
-
-
-
-
-<select name="speed_requirement">
-
-
-<option>
-Not Sure - Need Advice
-</option>
-
-
-<option>
+<option value="50 Mbps">
 50 Mbps
 </option>
 
-
-<option>
+<option value="100 Mbps">
 100 Mbps
 </option>
 
-
-<option>
-200 Mbps+
+<option value="200 Mbps">
+200 Mbps
 </option>
 
+<option value="500 Mbps">
+500 Mbps
+</option>
+
+<option value="1 Gbps">
+1 Gbps
+</option>
 
 </select>
 
 
 
+<!-- Usage -->
+
+<label for="usage">
+What will you mainly use the connection for?
+</label>
+
+<select
+id="usage"
+name="primary_usage"
+>
+
+<option value="">
+Please select
+</option>
+
+<option value="General browsing">
+General browsing
+</option>
+
+<option value="Streaming">
+Streaming
+</option>
+
+<option value="Remote work">
+Remote work
+</option>
+
+<option value="Gaming">
+Gaming
+</option>
+
+<option value="Online learning">
+Online learning
+</option>
+
+<option value="Business">
+Business operations
+</option>
+
+<option value="Multiple uses">
+Multiple uses
+</option>
+
+</select>
+
+
+
+<!-- Budget -->
+
+<label for="budget">
+Approximate Monthly Budget
+</label>
+
+<select
+id="budget"
+name="monthly_budget"
+>
+
+<option value="">
+Please select
+</option>
+
+<option value="Below R500">
+Below R500
+</option>
+
+<option value="R500 - R699">
+R500 - R699
+</option>
+
+<option value="R700 - R999">
+R700 - R999
+</option>
+
+<option value="R1,000 - R1,499">
+R1,000 - R1,499
+</option>
+
+<option value="R1,500+">
+R1,500+
+</option>
+
+<option value="Not sure">
+Not sure
+</option>
+
+</select>
+
+
+
+<!-- Requirements -->
+
+<label for="message">
+Tell Us More About What You Need
+</label>
 
 <textarea
-
+id="message"
 name="message"
-
-placeholder="Tell us anything else about your requirements">
-
-</textarea>
-
+rows="6"
+placeholder="Tell us about your current connection, requirements, problems or what you are looking for..."
+></textarea>
 
 
 
-<button type="submit" class="btn btn-secondary">
+<!-- Consent -->
 
-Submit Fibre Enquiry
+<label>
+
+<input
+type="checkbox"
+name="contact_consent"
+value="Yes"
+required
+>
+
+I agree that OneSwitch SA may contact me regarding my fibre enquiry. *
+
+</label>
+
+
+
+<!-- Submit -->
+
+<button
+type="submit"
+class="btn btn-secondary"
+>
+
+Get My Fibre Recommendation
 
 </button>
 
 
-
 </form>
 
-
 </div>
-
 
 </section>
 
 
 
-
+<!-- =========================
+     WHATSAPP ALTERNATIVE
+========================= -->
 
 <section>
 
-
 <div class="container">
-
 
 <div class="trust-banner">
 
-
 <h2>
-What Happens After Submission?
+Prefer WhatsApp?
 </h2>
 
+<p>
+You can also speak directly with the OneSwitch SA team on WhatsApp.
+</p>
+
+<a
+href="https://wa.me/27727320349?text=Hi%20OneSwitch%20SA,%20I%20would%20like%20a%20fibre%20recommendation."
+class="btn btn-secondary"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+Chat With Us On WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CUSTOMER PROMISE
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="trust-banner">
+
+<h2>
+What Happens Next?
+</h2>
 
 <ul>
 
 <li>
-We review your requirements
+We receive your enquiry.
 </li>
-
 
 <li>
-We assess suitable connectivity options
+We review your location and requirements.
 </li>
-
 
 <li>
-We guide you through your next steps
+We identify suitable fibre options where available.
 </li>
-
 
 <li>
-We help make your fibre decision simpler
+We contact you to discuss the next steps.
 </li>
-
 
 </ul>
 
+<p>
+<strong>
+OneSwitch SA aims to make choosing and switching fibre simpler, clearer and more convenient.
+</strong>
+</p>
 
 </div>
 
-
 </div>
-
 
 </section>
-
 
 
 </main>
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="container">
+
+<h3>
+OneSwitch SA
+</h3>
+
+<p>
+Making fibre choice simpler for South African homes and businesses.
+</p>
+
+<p>
+📧 oneswitchsa@gmail.com
+</p>
+
+<p>
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+|
+
+<a href="terms.html">
+Terms & Conditions
+</a>
+
+|
+
+<a href="contact.html">
+Contact Us
+</a>
+
+</p>
 
 <p>
 © 2026 OneSwitch SA. All Rights Reserved.
@@ -328,6 +653,26 @@ We help make your fibre decision simpler
 
 </footer>
 
+
+
+<!-- =========================
+     FLOATING WHATSAPP BUTTON
+========================= -->
+
+<a
+href="https://wa.me/27727320349?text=Hi%20OneSwitch%20SA,%20I%20need%20help%20with%20fibre."
+class="whatsapp-float"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Chat with OneSwitch SA on WhatsApp"
+>
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+alt="WhatsApp"
+>
+
+</a>
 
 
 </body>
