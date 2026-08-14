@@ -811,4 +811,317 @@ footer a:hover {
     z-index: 9999;
 
     box-shadow:
-        0 4px 
+        0 4px 12px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float img {
+    width: 35px;
+
+    height: 35px;
+
+    object-fit: contain;
+}
+
+
+/* =====================
+   Utility Classes
+===================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+
+/* =====================
+   Mobile Responsive
+===================== */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header img {
+        width: 150px;
+        max-width: 55%;
+
+        margin-bottom: 12px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        margin: 4px 6px;
+
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Countdown */
+
+    .countdown-banner {
+        padding: 20px 15px;
+
+        margin: 25px auto;
+    }
+
+    #countdown {
+        font-size: 1.15em;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 45px 15px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* Cards */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+
+    /* Buttons */
+
+    .button,
+    .btn {
+        display: block;
+
+        width: 100%;
+
+        max-width: 320px;
+
+        margin: 10px auto;
+    }
+
+
+    /* Forms */
+
+    form {
+        padding: 25px 20px;
+    }
+
+
+    /* Tables */
+
+    .table-wrapper {
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        font-size: 14px;
+
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+    }
+
+    .partner-network table {
+        font-size: 14px;
+    }
+
+
+    /* WhatsApp */
+
+    .whatsapp-float {
+        width: 55px;
+
+        height: 55px;
+
+        right: 18px;
+
+        bottom: 18px;
+    }
+
+    .whatsapp-float img {
+        width: 32px;
+
+        height: 32px;
+    }
+}
+
+
+/* =====================
+   Small Mobile Devices
+===================== */
+
+@media (max-width: 480px) {
+
+    header img {
+        width: 135px;
+
+        max-width: 50%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    nav a {
+        margin: 3px 4px;
+
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .countdown-banner {
+        padding: 18px 12px;
+    }
+
+    section {
+        padding: 40px 12px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 22px 17px;
+    }
+
+    form {
+        padding: 22px 15px;
+    }
+}
+
+
+/* =====================
+   Reduced Motion
+===================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+
+        animation: none !important;
+    }
+   }
