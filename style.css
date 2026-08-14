@@ -1,7 +1,11 @@
-
 /* =====================================
-   OneSwitch SA Website Design System v2.0
+   OneSwitch SA Website Design System v2.1
+   Launch-Ready Production CSS
    ===================================== */
+
+/* =====================
+   Global Reset
+===================== */
 
 * {
     box-sizing: border-box;
@@ -9,21 +13,41 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
+    /* Brand */
     --primary: #003366;
     --secondary: #0077cc;
     --accent: #00a8ff;
 
+    /* Base */
     --dark: #111827;
     --light: #f8fafc;
     --white: #ffffff;
 
+    /* Status */
     --success: #16a34a;
+    --warning: #f59e0b;
+    --danger: #dc2626;
+
+    /* UI */
     --border: #e5e7eb;
+    --muted: #64748b;
 
+    /* Effects */
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
 
+    /* Shape */
     --radius: 14px;
+    --radius-small: 8px;
+    --radius-pill: 30px;
+
+    /* Layout */
+    --container-width: 1200px;
 }
 
 
@@ -38,10 +62,62 @@ body {
         sans-serif;
 
     background: var(--light);
-
     color: var(--dark);
 
     line-height: 1.6;
+
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =====================
+   Images
+===================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header img {
+    display: block;
+
+    width: 180px;
+    max-width: 60%;
+
+    height: auto;
+
+    margin: 0 auto 15px;
+}
+
+
+/* =====================
+   Links
+===================== */
+
+a {
+    color: var(--secondary);
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+
+/* =====================
+   Accessibility
+===================== */
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
 
 
@@ -51,8 +127,9 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: var(--container-width);
+
+    margin: 0 auto;
 }
 
 
@@ -70,28 +147,33 @@ header {
     text-align: center;
 
     position: relative;
-
     z-index: 1000;
-}
-
-header img {
-    display: block;
-    margin: 0 auto 15px;
 }
 
 header h1 {
     color: var(--primary);
+
     margin-bottom: 10px;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
 }
 
 header h2 {
     color: var(--secondary);
+
     margin-bottom: 15px;
+
+    font-size: 1.35rem;
 }
 
 header p {
     max-width: 800px;
+
     margin: 0 auto 20px;
+
+    color: var(--muted);
 }
 
 
@@ -102,9 +184,12 @@ header p {
 nav {
     background: var(--primary);
 
-    padding: 15px 10px;
+    padding: 14px 10px;
 
     text-align: center;
+
+    position: relative;
+    z-index: 999;
 }
 
 nav a {
@@ -118,11 +203,17 @@ nav a {
 
     margin: 5px 10px;
 
-    transition: 0.3s;
+    padding: 5px 2px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 nav a:hover {
     color: var(--accent);
+
+    transform: translateY(-1px);
 }
 
 
@@ -131,13 +222,14 @@ nav a:hover {
 ===================== */
 
 .hero {
-    padding: 70px 20px;
+    padding: 80px 20px;
 
     background:
         linear-gradient(
             135deg,
-            #003366,
-            #0077cc
+            #003366 0%,
+            #005fa3 50%,
+            #0077cc 100%
         );
 
     color: var(--white);
@@ -151,10 +243,20 @@ nav a:hover {
     color: var(--white);
 }
 
+.hero h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 15px;
+
+    line-height: 1.15;
+}
+
 .hero h2 {
-    font-size: 2.2em;
+    font-size: 2.2rem;
 
     margin-bottom: 20px;
+
+    line-height: 1.2;
 }
 
 .hero p {
@@ -163,6 +265,8 @@ nav a:hover {
     max-width: 750px;
 
     margin: 0 auto 25px;
+
+    color: var(--white);
 }
 
 
@@ -220,41 +324,85 @@ nav a:hover {
 
     margin: 8px 5px;
 
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
 
     text-decoration: none;
 
     font-weight: 700;
 
-    background: var(--primary);
+    text-align: center;
 
-    color: var(--white);
+    cursor: pointer;
 
     border: 2px solid transparent;
 
-    transition: 0.3s;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .button:hover,
 .btn:hover {
-    background: var(--secondary);
-
     transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 
 /* =====================
-   Button Variations
+   Primary Button
 ===================== */
 
-.btn-primary {
+.btn-primary,
+.button {
     background: var(--primary);
 
     color: var(--white);
 }
 
+.btn-primary:hover,
+.button:hover {
+    background: var(--secondary);
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Secondary Button
+===================== */
+
 .btn-secondary {
     background: var(--accent);
+
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Outline Button
+===================== */
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--primary);
+
+    border-color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
 
     color: var(--white);
 }
@@ -267,9 +415,9 @@ nav a:hover {
 section {
     padding: 60px 20px;
 
-    max-width: 1200px;
+    max-width: var(--container-width);
 
-    margin: auto;
+    margin: 0 auto;
 }
 
 section h2 {
@@ -286,6 +434,8 @@ section > p {
     margin: 0 auto 25px;
 
     text-align: center;
+
+    color: var(--muted);
 }
 
 
@@ -303,6 +453,16 @@ section > p {
     color: var(--primary);
 
     font-size: 34px;
+
+    line-height: 1.2;
+}
+
+.section-title p {
+    max-width: 750px;
+
+    margin: 15px auto 0;
+
+    color: var(--muted);
 }
 
 
@@ -324,13 +484,21 @@ section > p {
 
     padding: 30px;
 
-    margin: 20px 0;
-
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
 
     text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-hover);
 }
 
 .card h3 {
@@ -341,12 +509,16 @@ section > p {
 
 .card p {
     margin-bottom: 20px;
+
+    color: var(--muted);
 }
 
 .card ul {
     list-style-position: inside;
 
     margin-bottom: 20px;
+
+    text-align: left;
 }
 
 
@@ -364,6 +536,16 @@ form {
     box-shadow: var(--shadow);
 }
 
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    color: var(--primary);
+}
+
 input,
 textarea,
 select {
@@ -376,9 +558,25 @@ select {
     border:
         1px solid var(--border);
 
-    border-radius: 8px;
+    border-radius: var(--radius-small);
+
+    font-family: inherit;
 
     font-size: 16px;
+
+    background: var(--white);
+
+    color: var(--dark);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
 }
 
 input:focus,
@@ -387,6 +585,9 @@ select:focus {
     outline: none;
 
     border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 119, 204, 0.12);
 }
 
 
@@ -394,16 +595,26 @@ select:focus {
    Tables
 ===================== */
 
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin: 30px auto;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
 table {
     width: 100%;
+
+    min-width: 600px;
 
     border-collapse: collapse;
 
     background: var(--white);
-
-    box-shadow: var(--shadow);
-
-    margin: 30px auto;
 }
 
 th {
@@ -499,6 +710,39 @@ tr:hover {
     text-align: center;
 }
 
+.trust-banner h3 {
+    color: var(--primary);
+
+    margin-bottom: 10px;
+}
+
+.trust-banner p {
+    color: var(--muted);
+}
+
+
+/* =====================
+   Status / Success
+===================== */
+
+.success {
+    color: var(--success);
+
+    font-weight: 600;
+}
+
+.warning {
+    color: var(--warning);
+
+    font-weight: 600;
+}
+
+.danger {
+    color: var(--danger);
+
+    font-weight: 600;
+}
+
 
 /* =====================
    Footer
@@ -522,12 +766,16 @@ footer h3 {
 
 footer p {
     margin-bottom: 12px;
+
+    color: #d1d5db;
 }
 
 footer a {
     color: var(--white);
 
     text-decoration: none;
+
+    transition: color 0.25s ease;
 }
 
 footer a:hover {
@@ -563,116 +811,4 @@ footer a:hover {
     z-index: 9999;
 
     box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.25);
-
-    transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.08);
-}
-
-.whatsapp-float img {
-    width: 35px;
-
-    height: 35px;
-}
-
-
-/* =====================
-   Mobile Responsive
-===================== */
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 25px 15px;
-    }
-
-    header h1 {
-        font-size: 30px;
-    }
-
-    header h2 {
-        font-size: 21px;
-    }
-
-    nav {
-        padding: 12px 5px;
-    }
-
-    nav a {
-        margin: 4px 6px;
-
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 55px 15px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .countdown-banner {
-        padding: 20px 15px;
-    }
-
-    #countdown {
-        font-size: 1.15em;
-    }
-
-    section {
-        padding: 45px 15px;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .button,
-    .btn {
-        display: block;
-
-        width: 100%;
-
-        max-width: 320px;
-
-        margin: 10px auto;
-    }
-
-    table {
-        font-size: 14px;
-    }
-
-    th,
-    td {
-        padding: 10px 8px;
-    }
-
-    .partner-network table {
-        font-size: 14px;
-    }
-
-    .whatsapp-float {
-        width: 55px;
-
-        height: 55px;
-
-        right: 18px;
-
-        bottom: 18px;
-    }
-
-    .whatsapp-float img {
-        width: 32px;
-
-        height: 32px;
-    }
-
-}
+        0 4px 
