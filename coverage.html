@@ -1,3 +1,5 @@
+Replace your current "coverage.html" with the following:
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,7 +120,7 @@ Provide your address details so we can understand your connectivity requirements
 </h3>
 
 <p>
-We assess suitable connectivity solutions based on your location and needs.
+We assess suitable connectivity solutions based on your location and requirements.
 </p>
 
 </div>
@@ -132,7 +134,7 @@ We assess suitable connectivity solutions based on your location and needs.
 </h3>
 
 <p>
-Get assistance choosing the right fibre solution.
+We help you understand your available fibre options and the next steps.
 </p>
 
 </div>
@@ -161,72 +163,104 @@ Get assistance choosing the right fibre solution.
 Fibre Coverage Enquiry
 </h2>
 
+<p>
+Complete the form below and the OneSwitch SA team will review your request.
+</p>
+
 </div>
 
 
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form
+action="https://formspree.io/f/mjgngrye"
+method="POST"
+>
 
 
-<input 
+<input
+type="hidden"
+name="_subject"
+value="New OneSwitch SA Fibre Coverage Enquiry"
+>
+
+
+<input
+type="hidden"
+name="_next"
+value="https://oneswitchsa.co.za/thank-you.html"
+>
+
+
+<input
 type="text"
 name="name"
 placeholder="Full Name"
-required>
+autocomplete="name"
+required
+>
 
 
-<input 
+<input
 type="email"
 name="email"
 placeholder="Email Address"
-required>
+autocomplete="email"
+required
+>
 
 
-<input 
+<input
 type="tel"
 name="phone"
 placeholder="Phone Number"
-required>
+autocomplete="tel"
+required
+>
 
 
-<input 
+<input
 type="text"
 name="address"
 placeholder="Street Address"
-required>
+autocomplete="street-address"
+required
+>
 
 
-<input 
+<input
 type="text"
 name="suburb"
 placeholder="Suburb"
-required>
+required
+>
 
 
-<input 
+<input
 type="text"
 name="city"
 placeholder="City"
-required>
+autocomplete="address-level2"
+required
+>
 
 
-<select name="requirement">
+<select name="requirement" required>
 
+<option value="" disabled selected>
+Select Fibre Requirement
+</option>
 
-<option>
+<option value="Home Fibre">
 Home Fibre
 </option>
 
-
-<option>
+<option value="Business Fibre">
 Business Fibre
 </option>
 
-
-<option>
+<option value="Upgrade Existing Connection">
 Upgrade Existing Connection
 </option>
-
 
 </select>
 
@@ -234,14 +268,18 @@ Upgrade Existing Connection
 
 <textarea
 name="message"
-placeholder="Tell us about your fibre requirements">
-</textarea>
+placeholder="Tell us about your fibre requirements"
+rows="5"
+></textarea>
 
 
 
-<button class="btn btn-secondary" type="submit">
+<button
+class="btn btn-secondary"
+type="submit"
+>
 
-Check My Coverage
+Check Fibre Availability
 
 </button>
 
@@ -273,7 +311,7 @@ Why Check With OneSwitch SA?
 
 
 <p>
-Finding the right fibre solution requires more than just availability. We consider your requirements to help identify suitable options.
+Finding the right fibre solution requires more than simply checking availability. We consider your requirements to help identify suitable options.
 </p>
 
 
@@ -298,7 +336,6 @@ Guidance throughout your fibre journey
 
 
 </div>
-
 
 </section>
 
@@ -326,3 +363,13 @@ Guidance throughout your fibre journey
 </body>
 
 </html>
+
+What changed
+
+- Correct Formspree endpoint: "mjgngrye"
+- Added an email subject so your inbox identifies these as OneSwitch SA Fibre Coverage Enquiries
+- Added a customer redirect to "thank-you.html"
+- Added proper "value" attributes to the requirement options
+- Added browser autocomplete support
+- Made the CTA more accurate: Check Fibre Availability
+- Preserved your existing OneSwitch SA structure and design system
