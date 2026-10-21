@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partner Opportunity | OneSwitch SA</title>
-  <meta name="description" content="Discover the OneSwitch SA partnership opportunity and how customer enquiries are routed for follow-up.">
+  <title>Contact OneSwitch SA</title>
+  <meta name="description" content="Contact OneSwitch SA for fibre enquiries, support and partnership opportunities.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,26 +28,75 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>The OneSwitch SA Partnership Opportunity</h1>
-        <p>Helping customers discover relevant fibre and connectivity enquiries in a structured and transparent way.</p>
+        <h1>Contact OneSwitch SA</h1>
+        <p>Have a fibre question, partnership enquiry or need assistance? We are here to help.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+        </div>
+
         <div class="card-grid">
           <div class="card">
-            <h3>Customer complexity</h3>
-            <p>Many customers struggle to understand their fibre choices and the next steps in the process.</p>
+            <h3>Customer Enquiries</h3>
+            <p>Need help finding a fibre solution? Submit your requirements and we will assist you.</p>
+            <a href="enquiry.html" class="btn btn-secondary">Start Fibre Enquiry</a>
           </div>
+
           <div class="card">
-            <h3>Better discovery</h3>
-            <p>OneSwitch SA creates a simpler path between customer requirements and relevant follow-up actions.</p>
+            <h3>Partnership Opportunities</h3>
+            <p>Interested in becoming part of the OneSwitch SA connectivity network?</p>
+            <a href="partner-application.html" class="btn btn-secondary">Become A Partner</a>
           </div>
+
           <div class="card">
-            <h3>Digital growth</h3>
-            <p>Thoughtful enquiry handling can create useful opportunities for customer acquisition.</p>
+            <h3>General Contact</h3>
+            <p>Email:<br>oneswitchsa@gmail.com</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Send Us A Message</h2>
+        </div>
+
+        <p id="contactFormStatus" class="warning" aria-live="polite">
+          This contact form is temporarily unavailable while a verified submission destination is being configured. Please use the email address above or contact us on WhatsApp instead.
+        </p>
+
+        <form action="" method="POST" novalidate>
+          <label for="contact-name">Full Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Full Name" disabled>
+
+          <label for="contact-email">Email Address</label>
+          <input id="contact-email" type="email" name="email" placeholder="Email Address" disabled>
+
+          <label for="contact-phone">Phone Number</label>
+          <input id="contact-phone" type="tel" name="phone" placeholder="Phone Number" disabled>
+
+          <label for="contact-type">Enquiry Type</label>
+          <select id="contact-type" name="type" disabled>
+            <option>Customer Enquiry</option>
+            <option>Partnership Opportunity</option>
+            <option>General Question</option>
+          </select>
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Your message" rows="5" disabled></textarea>
+
+          <button type="button" class="btn btn-secondary" disabled aria-disabled="true">Form Temporarily Unavailable</button>
+        </form>
+
+        <div class="trust-banner mt-20">
+          <h3>Alternative contact</h3>
+          <p>For quick questions, contact OneSwitch SA on WhatsApp.</p>
+          <a href="https://wa.me/27727320349?text=Hi%20OneSwitch%20SA%2C%20I%20need%20help%20with%20fibre." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
         </div>
       </div>
     </section>

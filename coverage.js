@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coverage Assessment Request | OneSwitch SA</title>
-  <meta name="description" content="Submit a fibre coverage assessment request with OneSwitch SA. Availability must be verified through the relevant provider or authorised source.">
+  <title>Fibre Coverage Check | OneSwitch SA</title>
+  <meta name="description" content="Check fibre availability and find suitable connectivity options with OneSwitch SA.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,28 +28,31 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Coverage Assessment Request</h1>
-        <p>Submit your address and requirements so the OneSwitch SA team can assess whether a fibre enquiry may be relevant to your location.</p>
+        <h1>Check Fibre Availability</h1>
+        <p>Tell us where you need connectivity and we will help identify suitable fibre options for your location.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>How this works</h2>
+          <h2>How It Works</h2>
         </div>
+
         <div class="card-grid">
           <div class="card">
-            <h3>1. Share Your Details</h3>
-            <p>Provide your address, suburb and the type of connection you need.</p>
+            <h3>1. Share Your Location</h3>
+            <p>Provide your address details so we can understand your connectivity requirements.</p>
           </div>
+
           <div class="card">
-            <h3>2. Request Review</h3>
-            <p>OneSwitch SA reviews the request and may identify relevant next steps for follow-up.</p>
+            <h3>2. Review Available Options</h3>
+            <p>We assess suitable connectivity solutions based on your location and requirements.</p>
           </div>
+
           <div class="card">
-            <h3>3. Confirm Through the Provider</h3>
-            <p>Availability must be confirmed through the relevant provider or another authorised source before a service can be arranged.</p>
+            <h3>3. Receive Guidance</h3>
+            <p>We help you understand your available fibre options and the next steps.</p>
           </div>
         </div>
       </div>
@@ -58,46 +61,35 @@
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>Request a Fibre Coverage Assessment</h2>
-          <p>Submitting this form does not confirm availability. It is a request for assessment and follow-up.</p>
+          <h2>Fibre Coverage Enquiry</h2>
+          <p>Complete the form below and the OneSwitch SA team will review your request.</p>
         </div>
 
         <form id="coverageForm" action="https://formspree.io/f/mjgngrye" method="POST">
-          <input type="hidden" name="_subject" value="New OneSwitch SA Coverage Assessment Request">
+          <input type="hidden" name="_subject" value="New OneSwitch SA Fibre Coverage Enquiry">
           <input type="hidden" name="_next" value="https://oneswitchsa.co.za/thank-you.html">
 
-          <label for="name">Full Name *</label>
-          <input id="name" type="text" name="name" autocomplete="name" required>
+          <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
+          <input type="text" name="address" placeholder="Street Address" autocomplete="street-address" required>
+          <input type="text" name="suburb" placeholder="Suburb" required>
+          <input type="text" name="city" placeholder="City" autocomplete="address-level2" required>
 
-          <label for="email">Email Address *</label>
-          <input id="email" type="email" name="email" autocomplete="email" required>
-
-          <label for="phone">Phone Number *</label>
-          <input id="phone" type="tel" name="phone" autocomplete="tel" required>
-
-          <label for="address">Street Address *</label>
-          <input id="address" type="text" name="address" autocomplete="street-address" required>
-
-          <label for="suburb">Suburb *</label>
-          <input id="suburb" type="text" name="suburb" required>
-
-          <label for="city">City *</label>
-          <input id="city" type="text" name="city" autocomplete="address-level2" required>
-
-          <label for="requirement">Service Requirement *</label>
-          <select id="requirement" name="requirement" required>
-            <option value="">Select an option</option>
+          <select name="requirement" required>
+            <option value="" disabled selected>Select Fibre Requirement</option>
             <option value="Home Fibre">Home Fibre</option>
             <option value="Business Fibre">Business Fibre</option>
             <option value="Upgrade Existing Connection">Upgrade Existing Connection</option>
           </select>
 
-          <label for="message">Additional Information</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us about your location, existing connection, or requirements."></textarea>
+          <textarea name="message" placeholder="Tell us about your fibre requirements" rows="5"></textarea>
 
-          <p id="coverageFormStatus" class="warning" aria-live="polite">This form is only a request for review and does not confirm fibre availability.</p>
+          <p id="coverageFormStatus" class="warning" aria-live="polite">
+            This form is a request for review only and does not confirm fibre availability.
+          </p>
 
-          <button type="submit" class="btn btn-secondary">Submit Coverage Request</button>
+          <button class="btn btn-secondary" type="submit">Check Fibre Availability</button>
         </form>
       </div>
     </section>
@@ -105,8 +97,13 @@
     <section>
       <div class="container">
         <div class="trust-banner">
-          <h2>Why submit a request?</h2>
-          <p>OneSwitch SA can help gather the information needed to assess a suitable follow-up path. The actual service availability, installation details, and eligibility must still be confirmed by the relevant provider or authorised source.</p>
+          <h2>Why Check With OneSwitch SA?</h2>
+          <p>Finding the right fibre solution requires more than simply checking availability. We consider your requirements to help identify suitable options.</p>
+          <ul>
+            <li>Location-based assistance</li>
+            <li>Solutions for homes and businesses</li>
+            <li>Guidance throughout your fibre journey</li>
+          </ul>
         </div>
       </div>
     </section>
