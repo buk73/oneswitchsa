@@ -1,120 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fibre Coverage Check | OneSwitch SA</title>
-  <meta name="description" content="Check fibre availability and find suitable connectivity options with OneSwitch SA.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="logo.jpg" alt="OneSwitch SA Logo" class="logo">
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="coverage.html">Coverage</a></li>
-          <li><a href="compare.html">Compare</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="isp-partners.html">Partners</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+(function () {
+  const form = document.getElementById('coverageForm');
+  const status = document.getElementById('coverageFormStatus');
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Check Fibre Availability</h1>
-        <p>Tell us where you need connectivity and we will help identify suitable fibre options for your location.</p>
-      </div>
-    </section>
+  if (!form || form.dataset.coverageBound === 'true') {
+    return;
+  }
 
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>How It Works</h2>
-        </div>
+  form.dataset.coverageBound = 'true';
 
-        <div class="card-grid">
-          <div class="card">
-            <h3>1. Share Your Location</h3>
-            <p>Provide your address details so we can understand your connectivity requirements.</p>
-          </div>
+  form.addEventListener('submit', function (event) {
+    const action = (form.getAttribute('action') || '').trim();
+    const validAction = !!action && action !== '#' && action !== 'https://formspree.io/f/YOUR_FORM_ID';
 
-          <div class="card">
-            <h3>2. Review Available Options</h3>
-            <p>We assess suitable connectivity solutions based on your location and requirements.</p>
-          </div>
+    if (!validAction) {
+      event.preventDefault();
+      if (status) {
+        status.textContent = 'This form is temporarily unavailable. Please contact OneSwitch SA by email or WhatsApp to submit your request.';
+        status.className = 'warning';
+      }
+      return;
+    }
 
-          <div class="card">
-            <h3>3. Receive Guidance</h3>
-            <p>We help you understand your available fibre options and the next steps.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Fibre Coverage Enquiry</h2>
-          <p>Complete the form below and the OneSwitch SA team will review your request.</p>
-        </div>
-
-        <form id="coverageForm" action="https://formspree.io/f/mjgngrye" method="POST">
-          <input type="hidden" name="_subject" value="New OneSwitch SA Fibre Coverage Enquiry">
-          <input type="hidden" name="_next" value="https://oneswitchsa.co.za/thank-you.html">
-
-          <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
-          <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
-          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
-          <input type="text" name="address" placeholder="Street Address" autocomplete="street-address" required>
-          <input type="text" name="suburb" placeholder="Suburb" required>
-          <input type="text" name="city" placeholder="City" autocomplete="address-level2" required>
-
-          <select name="requirement" required>
-            <option value="" disabled selected>Select Fibre Requirement</option>
-            <option value="Home Fibre">Home Fibre</option>
-            <option value="Business Fibre">Business Fibre</option>
-            <option value="Upgrade Existing Connection">Upgrade Existing Connection</option>
-          </select>
-
-          <textarea name="message" placeholder="Tell us about your fibre requirements" rows="5"></textarea>
-
-          <p id="coverageFormStatus" class="warning" aria-live="polite">
-            This form is a request for review only and does not confirm fibre availability.
-          </p>
-
-          <button class="btn btn-secondary" type="submit">Check Fibre Availability</button>
-        </form>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="trust-banner">
-          <h2>Why Check With OneSwitch SA?</h2>
-          <p>Finding the right fibre solution requires more than simply checking availability. We consider your requirements to help identify suitable options.</p>
-          <ul>
-            <li>Location-based assistance</li>
-            <li>Solutions for homes and businesses</li>
-            <li>Guidance throughout your fibre journey</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 OneSwitch SA. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="coverage.js"></script>
-</body>
-</html>
+    if (status) {
+      status.textContent = 'Please wait while your submission is sent. OneSwitch SA will review the request and follow up as needed.';
+      status.className = 'warning';
+    }
+  });
+})();

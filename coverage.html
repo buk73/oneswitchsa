@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact OneSwitch SA</title>
-  <meta name="description" content="Contact OneSwitch SA for fibre enquiries, support and partnership opportunities.">
+  <title>Fibre Coverage Check | OneSwitch SA</title>
+  <meta name="description" content="Check fibre availability and find suitable connectivity options with OneSwitch SA.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,33 +28,31 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Contact OneSwitch SA</h1>
-        <p>Have a fibre question, partnership enquiry or need assistance? We are here to help.</p>
+        <h1>Check Fibre Availability</h1>
+        <p>Tell us where you need connectivity and we will help identify suitable fibre options for your location.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>Get In Touch</h2>
+          <h2>How It Works</h2>
         </div>
 
         <div class="card-grid">
           <div class="card">
-            <h3>Customer Enquiries</h3>
-            <p>Need help finding a fibre solution? Submit your requirements and we will assist you.</p>
-            <a href="enquiry.html" class="btn btn-secondary">Start Fibre Enquiry</a>
+            <h3>1. Share Your Location</h3>
+            <p>Provide your address details so we can understand your connectivity requirements.</p>
           </div>
 
           <div class="card">
-            <h3>Partnership Opportunities</h3>
-            <p>Interested in becoming part of the OneSwitch SA connectivity network?</p>
-            <a href="partner-application.html" class="btn btn-secondary">Become A Partner</a>
+            <h3>2. Review Available Options</h3>
+            <p>We assess suitable connectivity solutions based on your location and requirements.</p>
           </div>
 
           <div class="card">
-            <h3>General Contact</h3>
-            <p>Email:<br>oneswitchsa@gmail.com</p>
+            <h3>3. Receive Guidance</h3>
+            <p>We help you understand your available fibre options and the next steps.</p>
           </div>
         </div>
       </div>
@@ -63,40 +61,49 @@
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>Send Us A Message</h2>
+          <h2>Fibre Coverage Enquiry</h2>
+          <p>Complete the form below and the OneSwitch SA team will review your request.</p>
         </div>
 
-        <p id="contactFormStatus" class="warning" aria-live="polite">
-          This contact form is temporarily unavailable while a verified submission destination is being configured. Please use the email address above or contact us on WhatsApp instead.
-        </p>
+        <form id="coverageForm" action="https://formspree.io/f/mjgngrye" method="POST">
+          <input type="hidden" name="_subject" value="New OneSwitch SA Fibre Coverage Enquiry">
+          <input type="hidden" name="_next" value="https://oneswitchsa.co.za/thank-you.html">
 
-        <form action="" method="POST" novalidate>
-          <label for="contact-name">Full Name</label>
-          <input id="contact-name" type="text" name="name" placeholder="Full Name" disabled>
+          <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
+          <input type="text" name="address" placeholder="Street Address" autocomplete="street-address" required>
+          <input type="text" name="suburb" placeholder="Suburb" required>
+          <input type="text" name="city" placeholder="City" autocomplete="address-level2" required>
 
-          <label for="contact-email">Email Address</label>
-          <input id="contact-email" type="email" name="email" placeholder="Email Address" disabled>
-
-          <label for="contact-phone">Phone Number</label>
-          <input id="contact-phone" type="tel" name="phone" placeholder="Phone Number" disabled>
-
-          <label for="contact-type">Enquiry Type</label>
-          <select id="contact-type" name="type" disabled>
-            <option>Customer Enquiry</option>
-            <option>Partnership Opportunity</option>
-            <option>General Question</option>
+          <select name="requirement" required>
+            <option value="" disabled selected>Select Fibre Requirement</option>
+            <option value="Home Fibre">Home Fibre</option>
+            <option value="Business Fibre">Business Fibre</option>
+            <option value="Upgrade Existing Connection">Upgrade Existing Connection</option>
           </select>
 
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" placeholder="Your message" rows="5" disabled></textarea>
+          <textarea name="message" placeholder="Tell us about your fibre requirements" rows="5"></textarea>
 
-          <button type="button" class="btn btn-secondary" disabled aria-disabled="true">Form Temporarily Unavailable</button>
+          <p id="coverageFormStatus" class="warning" aria-live="polite">
+            This form is a request for review only and does not confirm fibre availability.
+          </p>
+
+          <button class="btn btn-secondary" type="submit">Check Fibre Availability</button>
         </form>
+      </div>
+    </section>
 
-        <div class="trust-banner mt-20">
-          <h3>Alternative contact</h3>
-          <p>For quick questions, contact OneSwitch SA on WhatsApp.</p>
-          <a href="https://wa.me/27727320349?text=Hi%20OneSwitch%20SA%2C%20I%20need%20help%20with%20fibre." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+    <section>
+      <div class="container">
+        <div class="trust-banner">
+          <h2>Why Check With OneSwitch SA?</h2>
+          <p>Finding the right fibre solution requires more than simply checking availability. We consider your requirements to help identify suitable options.</p>
+          <ul>
+            <li>Location-based assistance</li>
+            <li>Solutions for homes and businesses</li>
+            <li>Guidance throughout your fibre journey</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -107,5 +114,7 @@
       <p>© 2026 OneSwitch SA. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script src="coverage.js"></script>
 </body>
 </html>
