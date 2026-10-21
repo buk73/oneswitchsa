@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sales Ambassador Portal | OneSwitch SA</title>
+
+  <meta name="description" content="The OneSwitch SA Sales Ambassador Portal for submitting fibre enquiries and customer leads.">
+
+  <meta name="theme-color" content="#003366">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .portal-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .portal-intro {
+      margin-bottom: 28px;
+    }
+
+    .portal-form {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #dddddd;
+    }
+
+    .portal-form label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: 600;
+    }
+
+    .portal-form input,
+    .portal-form select,
+    .portal-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #b8c2cc;
+      border-radius: 6px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    .portal-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .portal-form input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .consent-label {
+      display: flex !important;
+      align-items: flex-start;
+      gap: 6px;
+      font-weight: 400 !important;
+      line-height: 1.5;
+    }
+
+    .form-note {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-top: 18px;
+    }
+
+    .portal-form button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #003366;
+      color: #ffffff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .portal-form button:focus,
+    .portal-form input:focus,
+    .portal-form select:focus,
+    .portal-form textarea:focus {
+      outline: 3px solid #8bbcff;
+      outline-offset: 2px;
+    }
+
+    .portal-notice {
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 8px;
+      background: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    .required-note {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .portal-form {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" aria-label="OneSwitch SA homepage">
+      <img src="logo.jpg" alt="OneSwitch SA Logo" class="logo">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="coverage.html">Coverage</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="isp-partners.html">Partners</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Sales Ambassador Portal</h1>
+
+      <p>
+        Welcome to the OneSwitch SA sales submission portal.
+        Submit customer enquiries accurately so our team can
+        review them and coordinate the next steps.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container portal-container">
+
+      <div class="portal-intro">
+        <h2>Submit a Customer Lead</h2>
+
+        <p>
+          Complete the form below for each prospective customer.
+          Please check the information carefully before submitting.
+        </p>
+
+        <div class="portal-notice">
+          <strong>Important:</strong>
+          Submit a customer's details only when you have their
+          permission to share the information with OneSwitch SA
+          for the purpose of responding to their fibre enquiry.
+          A submission is not confirmation of a sale, payment
+          or successful installation.
+        </div>
+
+        <p class="required-note">Fields marked * are required.</p>
+      </div>
+
+      <form
+        class="portal-form"
+        action="https://formspree.io/f/YOUR_SALES_FORM_ID"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="OneSwitch SA - New Sales Ambassador Lead"
+        >
+
+        <input
+          type="hidden"
+          name="submission_type"
+          value="Sales Ambassador Lead"
+        >
+
+        <h3>1. Ambassador Details</h3>
+
+        <label for="ambassador-name">Ambassador full name *</label>
+        <input
+          id="ambassador-name"
+          name="ambassador_name"
+          type="text"
+          autocomplete="name"
+          required
+        >
+
+        <label for="ambassador-id">Ambassador ID (if assigned)</label>
+        <input
+          id="ambassador-id"
+          name="ambassador_id"
+          type="text"
+          autocomplete="off"
+        >
+
+        <label for="ambassador-phone">Ambassador contact number *</label>
+        <input
+          id="ambassador-phone"
+          name="ambassador_phone"
+          type="tel"
+          autocomplete="tel"
+          required
+        >
+
+        <h3>2. Customer Details</h3>
+
+        <label for="customer-name">Customer full name *</label>
+        <input
+          id="customer-name"
+          name="customer_name"
+          type="text"
+          autocomplete="off"
+          required
+        >
+
+        <label for="customer-phone">Customer contact number *</label>
+        <input
+          id="customer-phone"
+          name="customer_phone"
+          type="tel"
+          autocomplete="off"
+          required
+        >
+
+        <label for="customer-email">Customer email (if provided)</label>
+        <input
+          id="customer-email"
+          name="customer_email"
+          type="email"
+          autocomplete="off"
+        >
+
+        <label for="address">Installation street address *</label>
+        <input
+          id="address"
+          name="installation_address"
+          type="text"
+          autocomplete="street-address"
+          required
+        >
+
+        <label for="suburb">Suburb or township *</label>
+        <input
+          id="suburb"
+          name="suburb"
+          type="text"
+          required
+        >
+
+        <label for="city">Town or city *</label>
+        <input
+          id="city"
+          name="city"
+          type="text"
+          autocomplete="address-level2"
+          required
+        >
+
+        <h3>3. Customer Requirements</h3>
+
+        <label for="enquiry-type">Type of enquiry *</label>
+        <select id="enquiry-type" name="enquiry_type" required>
+          <option value="">Select an option</option>
+          <option value="New fibre connection">New fibre connection</option>
+          <option value="Fibre package enquiry">Fibre package enquiry</option>
+          <option value="Switching provider">Switching provider</option>
+          <option value="Existing order follow-up">Existing order follow-up</option>
+        </select>
+
+        <label for="customer-status">Customer's current status *</label>
+        <select id="customer-status" name="customer_status" required>
+          <option value="">Select an option</option>
+          <option value="Interested - needs information">Interested - needs information</option>
+          <option value="Ready to proceed">Ready to proceed</option>
+          <option value="Awaiting payday">Awaiting payday</option>
+          <option value="Previously submitted - follow-up">Previously submitted - follow-up</option>
+        </select>
+
+        <label for="notes">Additional information</label>
+        <textarea
+          id="notes"
+          name="additional_notes"
+          maxlength="1500"
+          placeholder="Record relevant requirements or agreed follow-up arrangements. Do not include passwords, identity document numbers or unnecessary personal information."
+        ></textarea>
+
+        <h3>4. Customer Consent</h3>
+
+        <label class="consent-label" for="customer-consent">
+          <input
+            id="customer-consent"
+            name="customer_consent_confirmed"
+            type="checkbox"
+            value="Yes"
+            required
+          >
+          <span>
+            I confirm that the customer has agreed to have their
+            details shared with OneSwitch SA for the purpose of
+            responding to their fibre enquiry. *
+          </span>
+        </label>
+
+        <label class="consent-label" for="accuracy-confirmation">
+          <input
+            id="accuracy-confirmation"
+            name="submission_accuracy_confirmed"
+            type="checkbox"
+            value="Yes"
+            required
+          >
+          <span>
+            I confirm that I have provided the information
+            accurately and understand that the submission must
+            be reviewed before it can be treated as a valid lead. *
+          </span>
+        </label>
+
+        <p class="form-note">
+          OneSwitch SA will use submitted information to review
+          the enquiry and coordinate relevant follow-up, subject
+          to its privacy policy and applicable data-protection
+          requirements.
+        </p>
+
+        <button type="submit">Submit Customer Lead</button>
+
+      </form>
+
+      <p>
+        Need assistance?
+        <a href="https://wa.me/27727320349">
+          Contact OneSwitch SA on WhatsApp
+        </a>.
+      </p>
+
+      <p>
+        <a href="privacy.html">Read our Privacy Policy</a>
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 OneSwitch SA (Pty) Ltd. All Rights Reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+  </html>
