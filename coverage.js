@@ -1,29 +1,8 @@
-(function () {
-  const form = document.getElementById('coverageForm');
-  const status = document.getElementById('coverageFormStatus');
+document.getElementById("coverageForm").addEventListener("submit", function(event) {
 
-  if (!form || form.dataset.coverageBound === 'true') {
-    return;
-  }
+    event.preventDefault();
 
-  form.dataset.coverageBound = 'true';
+    document.getElementById("coverageResult").innerHTML =
+    "✅ Great news! Your fibre coverage request has been received. A OneSwitch SA consultant will contact you with available options.";
 
-  form.addEventListener('submit', function (event) {
-    const action = (form.getAttribute('action') || '').trim();
-    const validAction = !!action && action !== '#' && action !== 'https://formspree.io/f/YOUR_FORM_ID';
-
-    if (!validAction) {
-      event.preventDefault();
-      if (status) {
-        status.textContent = 'This form is temporarily unavailable. Please contact OneSwitch SA by email or WhatsApp to submit your request.';
-        status.className = 'warning';
-      }
-      return;
-    }
-
-    if (status) {
-      status.textContent = 'Please wait while your submission is sent. OneSwitch SA will review the request and follow up as needed.';
-      status.className = 'warning';
-    }
-  });
-})();
+});
