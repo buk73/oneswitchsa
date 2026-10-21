@@ -1,29 +1,1000 @@
-(function () {
-  const form = document.getElementById('coverageForm');
-  const status = document.getElementById('coverageFormStatus');
+/* =====================================
+   OneSwitch SA Website Design System v2.1
+   Launch-Ready Production CSS
+   ===================================== */
 
-  if (!form || form.dataset.coverageBound === 'true') {
-    return;
-  }
+/* =====================
+   Global Reset
+===================== */
 
-  form.dataset.coverageBound = 'true';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  form.addEventListener('submit', function (event) {
-    const action = (form.getAttribute('action') || '').trim();
-    const validAction = !!action && action !== '#' && action !== 'https://formspree.io/f/YOUR_FORM_ID';
+html {
+    scroll-behavior: smooth;
+}
 
-    if (!validAction) {
-      event.preventDefault();
-      if (status) {
-        status.textContent = 'This form is temporarily unavailable. Please contact OneSwitch SA by email or WhatsApp to submit your request.';
-        status.className = 'warning';
-      }
-      return;
+:root {
+    /* Brand */
+    --primary: #003366;
+    --secondary: #0077cc;
+    --accent: #00a8ff;
+
+    /* Base */
+    --dark: #111827;
+    --light: #f8fafc;
+    --white: #ffffff;
+
+    /* Status */
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --danger: #dc2626;
+
+    /* UI */
+    --border: #e5e7eb;
+    --muted: #64748b;
+
+    /* Effects */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+    /* Shape */
+    --radius: 14px;
+    --radius-small: 8px;
+    --radius-pill: 30px;
+
+    /* Layout */
+    --container-width: 1200px;
+}
+
+
+/* =====================
+   Body
+===================== */
+
+body {
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--light);
+    color: var(--dark);
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =====================
+   Images
+===================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header img {
+    display: block;
+
+    width: 180px;
+    max-width: 60%;
+
+    height: auto;
+
+    margin: 0 auto 15px;
+}
+
+
+/* =====================
+   Links
+===================== */
+
+a {
+    color: var(--secondary);
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+
+/* =====================
+   Accessibility
+===================== */
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =====================
+   Container
+===================== */
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+
+/* =====================
+   Header
+===================== */
+
+header {
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--primary);
+
+    margin-bottom: 10px;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+}
+
+header h2 {
+    color: var(--secondary);
+
+    margin-bottom: 15px;
+
+    font-size: 1.35rem;
+}
+
+header p {
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    color: var(--muted);
+}
+
+
+/* =====================
+   Navigation
+===================== */
+
+nav {
+    background: var(--primary);
+
+    padding: 14px 10px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 999;
+}
+
+nav a {
+    display: inline-block;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin: 5px 10px;
+
+    padding: 5px 2px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================
+   Hero Section
+===================== */
+
+.hero {
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003366 0%,
+            #005fa3 50%,
+            #0077cc 100%
+        );
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+
+    margin-bottom: 15px;
+
+    line-height: 1.15;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Countdown Banner
+===================== */
+
+.countdown-banner {
+    background: #FFD54F;
+
+    color: #003366;
+
+    padding: 25px;
+
+    border-radius: var(--radius);
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.countdown-banner h3 {
+    color: #003366;
+
+    margin-bottom: 10px;
+}
+
+.countdown-banner p {
+    color: #003366;
+
+    margin-bottom: 8px;
+}
+
+#countdown {
+    font-size: 1.4em;
+
+    font-weight: 700;
+
+    margin-top: 10px;
+}
+
+
+/* =====================
+   Buttons
+===================== */
+
+.button,
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    margin: 8px 5px;
+
+    border-radius: var(--radius-pill);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================
+   Primary Button
+===================== */
+
+.btn-primary,
+.button {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.btn-primary:hover,
+.button:hover {
+    background: var(--secondary);
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Secondary Button
+===================== */
+
+.btn-secondary {
+    background: var(--accent);
+
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Outline Button
+===================== */
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--primary);
+
+    border-color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* =====================
+   Sections
+===================== */
+
+section {
+    padding: 60px 20px;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+section h2 {
+    color: var(--primary);
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+section > p {
+    max-width: 800px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+
+/* =====================
+   Section Title
+===================== */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: var(--primary);
+
+    font-size: 34px;
+
+    line-height: 1.2;
+}
+
+.section-title p {
+    max-width: 750px;
+
+    margin: 15px auto 0;
+
+    color: var(--muted);
+}
+
+
+/* =====================
+   Cards
+===================== */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+
+    padding: 30px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    color: var(--primary);
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+}
+
+.card ul {
+    list-style-position: inside;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+
+/* =====================
+   Forms
+===================== */
+
+form {
+    background: var(--white);
+
+    padding: 35px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    color: var(--primary);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius-small);
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    background: var(--white);
+
+    color: var(--dark);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 119, 204, 0.12);
+}
+
+
+/* =====================
+   Tables
+===================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin: 30px auto;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+
+    min-width: 600px;
+
+    border-collapse: collapse;
+
+    background: var(--white);
+}
+
+th {
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+td {
+    padding: 15px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+tr:hover {
+    background: #eef5ff;
+}
+
+
+/* =====================
+   Trusted Partner Network
+===================== */
+
+.partner-network {
+    text-align: center;
+
+    margin: 40px auto;
+}
+
+.partner-network table {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    border-collapse: collapse;
+}
+
+.partner-network th {
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+.partner-network td {
+    border: 1px solid var(--border);
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+.partner-network tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+.partner-network tr:hover {
+    background: #eef5ff;
+}
+
+
+/* =====================
+   Trust Banner
+===================== */
+
+.trust-banner {
+    background: var(--white);
+
+    padding: 30px;
+
+    margin: 30px 0;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.trust-banner h3 {
+    color: var(--primary);
+
+    margin-bottom: 10px;
+}
+
+.trust-banner p {
+    color: var(--muted);
+}
+
+
+/* =====================
+   Status / Success
+===================== */
+
+.success {
+    color: var(--success);
+
+    font-weight: 600;
+}
+
+.warning {
+    color: var(--warning);
+
+    font-weight: 600;
+}
+
+.danger {
+    color: var(--danger);
+
+    font-weight: 600;
+}
+
+
+/* =====================
+   Footer
+===================== */
+
+footer {
+    background: var(--dark);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 12px;
+
+    color: #d1d5db;
+}
+
+footer a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+
+/* =====================
+   Floating WhatsApp Button
+===================== */
+
+.whatsapp-float {
+    position: fixed;
+
+    width: 60px;
+
+    height: 60px;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    background-color: #25D366;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float img {
+    width: 35px;
+
+    height: 35px;
+
+    object-fit: contain;
+}
+
+
+/* =====================
+   Utility Classes
+===================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+
+/* =====================
+   Mobile Responsive
+===================== */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    header {
+        padding: 25px 15px;
     }
 
-    if (status) {
-      status.textContent = 'Please wait while your submission is sent. OneSwitch SA will review the request and follow up as needed.';
-      status.className = 'warning';
+    header img {
+        width: 150px;
+        max-width: 55%;
+
+        margin-bottom: 12px;
     }
-  });
-})();
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        margin: 4px 6px;
+
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Countdown */
+
+    .countdown-banner {
+        padding: 20px 15px;
+
+        margin: 25px auto;
+    }
+
+    #countdown {
+        font-size: 1.15em;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 45px 15px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* Cards */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+
+    /* Buttons */
+
+    .button,
+    .btn {
+        display: block;
+
+        width: 100%;
+
+        max-width: 320px;
+
+        margin: 10px auto;
+    }
+
+
+    /* Forms */
+
+    form {
+        padding: 25px 20px;
+    }
+}
