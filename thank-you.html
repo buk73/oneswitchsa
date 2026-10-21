@@ -1,28 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | OneSwitch SA</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact OneSwitch SA</title>
+  <meta name="description" content="Contact OneSwitch SA for fibre enquiries, support and partnership opportunities.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="container">
+      <img src="logo.jpg" alt="OneSwitch SA Logo" class="logo">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="coverage.html">Coverage</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="isp-partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-    <img src="logo.jpg" alt="OneSwitch SA Logo" width="180">
-    <h1>Thank You!</h1>
-</header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Contact OneSwitch SA</h1>
+        <p>Have a fibre question, partnership enquiry or general support request? We are here to help.</p>
+      </div>
+    </section>
 
-<main>
-    <h2>Your enquiry has been received.</h2>
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Get in touch</h2>
+        </div>
 
-    <p>
-        Thank you for choosing OneSwitch SA.
-        Our team will review your enquiry and contact you as soon as possible.
-    </p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Customer Enquiries</h3>
+            <p>Need help finding a fibre solution? Start a customer enquiry.</p>
+            <a href="enquiry.html" class="btn btn-secondary">Start Fibre Enquiry</a>
+          </div>
+          <div class="card">
+            <h3>Partnership Opportunities</h3>
+            <p>Interested in becoming part of the OneSwitch SA connectivity network?</p>
+            <a href="partner-application.html" class="btn btn-secondary">Become a Partner</a>
+          </div>
+          <div class="card">
+            <h3>General Contact</h3>
+            <p>Email:<br>oneswitchsa@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <a href="index.html">Return to Home</a>
-</main>
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Send a message</h2>
+        </div>
 
+        <p id="contactFormStatus" class="warning" aria-live="polite">
+          This contact form is temporarily unavailable while a verified submission destination is being configured. Please use the email address above or contact us on WhatsApp instead.
+        </p>
+
+        <form action="" method="POST" novalidate>
+          <label for="contact-name">Full Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Full Name" disabled>
+
+          <label for="contact-email">Email Address</label>
+          <input id="contact-email" type="email" name="email" placeholder="Email Address" disabled>
+
+          <label for="contact-phone">Phone Number</label>
+          <input id="contact-phone" type="tel" name="phone" placeholder="Phone Number" disabled>
+
+          <label for="contact-type">Enquiry Type</label>
+          <select id="contact-type" name="type" disabled>
+            <option>Customer Enquiry</option>
+            <option>Partnership Opportunity</option>
+            <option>General Question</option>
+          </select>
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="Your message" disabled></textarea>
+
+          <button type="button" class="btn btn-secondary" disabled aria-disabled="true">Form Temporarily Unavailable</button>
+        </form>
+
+        <div class="trust-banner mt-20">
+          <h3>Alternative contact</h3>
+          <p>For quick questions, contact OneSwitch SA on WhatsApp.</p>
+          <a href="https://wa.me/27727320349?text=Hi%20OneSwitch%20SA%2C%20I%20need%20help%20with%20fibre." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 OneSwitch SA. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
-  </html>
+</html>
