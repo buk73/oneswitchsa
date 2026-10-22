@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Freelancer Opportunities | OneSwitch SA (Pty) Ltd</title>
-
-  <meta name="description" content="Explore independent sales and customer referral opportunities with OneSwitch SA (Pty) Ltd. Apply to express your interest in our fibre referral programme.">
-
+  <meta name="description" content="Express your interest in independent sales and customer referral opportunities with OneSwitch SA (Pty) Ltd.">
   <meta name="theme-color" content="#003366">
-
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -43,32 +39,17 @@
       font: inherit;
     }
 
-    .freelancer-form textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
     .freelancer-form input[type="checkbox"] {
       display: inline-block;
       width: auto;
       margin-right: 8px;
     }
 
-    .freelancer-form .consent-label {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .freelancer-form .consent-label input {
-      flex: 0 0 auto;
-      margin-top: 5px;
+    .freelancer-form textarea {
+      min-height: 110px;
     }
 
     .freelancer-form button {
-      display: block;
       width: 100%;
       margin-top: 24px;
       padding: 14px;
@@ -81,14 +62,6 @@
       cursor: pointer;
     }
 
-    .freelancer-form input:focus,
-    .freelancer-form select:focus,
-    .freelancer-form textarea:focus,
-    .freelancer-form button:focus {
-      outline: 3px solid #8bbcff;
-      outline-offset: 2px;
-    }
-
     .opportunity-note {
       padding: 16px;
       margin: 20px 0;
@@ -97,4 +70,147 @@
       line-height: 1.6;
     }
 
-    .fre
+    .consent-label {
+      display: flex !important;
+      align-items: flex-start;
+      gap: 8px;
+      font-weight: 400 !important;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a> |
+      <a href="services.html">Services</a> |
+      <a href="coverage.html">Coverage</a> |
+      <a href="compare.html">Compare</a> |
+      <a href="isp-partners.html">Partners</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="freelancer-container">
+    <section>
+      <h1>Freelancer Opportunities</h1>
+      <p>
+        Interested in working with OneSwitch SA (Pty) Ltd?
+        We welcome expressions of interest from people interested
+        in customer referrals, community outreach and sales support
+        relating to fibre connectivity.
+      </p>
+
+      <div class="opportunity-note">
+        <strong>Please note:</strong> Submitting this form is an
+        expression of interest, not an offer of employment or a
+        guarantee of work, acceptance, commissions or income.
+        Any opportunity will be discussed separately, including
+        its applicable terms.
+      </div>
+    </section>
+
+    <section>
+      <h2>Register Your Interest</h2>
+      <p>Complete the form below. All required fields are marked.</p>
+
+      <form
+        class="freelancer-form"
+        action="https://formspree.io/f/YOUR_FREELANCER_FORM_ID"
+        method="POST">
+
+        <input type="hidden" name="_subject"
+          value="OneSwitch SA - Freelancer Opportunity Application">
+        <input type="hidden" name="application_type"
+          value="Freelancer Opportunity">
+
+        <label for="full_name">Full name *</label>
+        <input id="full_name" name="full_name"
+          type="text" autocomplete="name" required>
+
+        <label for="phone">Mobile / WhatsApp number *</label>
+        <input id="phone" name="phone"
+          type="tel" autocomplete="tel" required>
+
+        <label for="email">Email address *</label>
+        <input id="email" name="email"
+          type="email" autocomplete="email" required>
+
+        <label for="area">Town / suburb *</label>
+        <input id="area" name="area"
+          type="text" required>
+
+        <label for="experience">Relevant experience *</label>
+        <select id="experience" name="experience" required>
+          <option value="">Select an option</option>
+          <option value="No experience yet">No experience yet</option>
+          <option value="Customer service">Customer service</option>
+          <option value="Sales">Sales</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Lead generation">Lead generation</option>
+          <option value="Other experience">Other</option>
+        </select>
+
+        <label for="availability">Availability *</label>
+        <select id="availability" name="availability" required>
+          <option value="">Select an option</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Weekends">Weekends</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+
+        <label for="smartphone">Do you have access to a smartphone
+          and internet? *</label>
+        <select id="smartphone" name="smartphone_access" required>
+          <option value="">Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="motivation">
+          Tell us about yourself and why you're interested *
+        </label>
+        <textarea id="motivation" name="motivation"
+          required></textarea>
+
+        <label class="consent-label">
+          <input type="checkbox" name="privacy_acknowledged"
+            value="Yes" required>
+          I have read the
+          <a href="privacy.html">Privacy Policy</a>
+          and understand how my information may be used.
+        </label>
+
+        <label class="consent-label">
+          <input type="checkbox" name="contact_consent"
+            value="Yes" required>
+          I consent to OneSwitch SA (Pty) Ltd contacting me
+          about this expression of interest.
+        </label>
+
+        <button type="submit">Submit Expression of Interest</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Questions?</h2>
+      <p>
+        Contact us at
+        <a href="mailto:oneswitchsa@gmail.com">
+          oneswitchsa@gmail.com
+        </a>
+        or message us on
+        <a href="https://wa.me/27727320349">WhatsApp</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OneSwitch SA (Pty) Ltd. All rights reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms and Conditions</a>
+  </footer>
+</body>
+</html>
